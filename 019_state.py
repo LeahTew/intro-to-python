@@ -11,7 +11,9 @@ print(f"b is {b}")
 # @TASK: What does that output? And why? Take a guess, then
 # run the code and see.
 
-# Was it what you expected?
+#20, as a must equal whatever is in b and ignore the value assigned as the a = b comes last in order
+
+# Was it what you expected? Yes
 
 # Try to puzzle it out, and then move on to
 # 020_state_tables.py
