@@ -29,8 +29,28 @@ from lib.helpers import check_that_these_are_equal
 print("")
 print("Function: report_long_words")
 
+def check_length(word):
+  result = ""
+  if len(word) > 15:
+    result = word[0:15] + '...'
+  else:
+    result = word
+  return result
+
 def report_long_words(words):
-  pass
+  result = []
+  for word in words:
+    if len(word) > 10 and '-' not in word:
+      word = check_length(word)
+      result.append(word)
+
+  return f"These words are quite long: {', '.join(result)}"
+      
+
+
+# words longer than 10
+# don't contain -
+# if longer than 15, shorten to 15 + '...'
 
 check_that_these_are_equal(
   report_long_words([
